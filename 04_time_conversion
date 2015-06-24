@@ -1,0 +1,6 @@
+def time_conversion(minutes)
+    min = (minutes % 60).to_s
+    hr = (minutes / 60).to_s
+    
+    puts "#{hr}:#{min}"
+end
