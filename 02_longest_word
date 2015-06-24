@@ -1,0 +1,28 @@
+  def longest_word(sentence)
+    current_word = nil
+    longest_word = nil
+    words = sentence.split(" ")
+    
+    words.each do |i1|
+      current_word = i1
+      words.each do |i2|
+          if (i2.length > current_word.length) || (longest_word == nil)
+              longest_word = current_word
+          end 
+      end
+    end
+    longest_word
+end
+
+puts(
+  'longest_word("short longest") == "longest": ' +
+  (longest_word('short longest') == 'longest').to_s
+)
+puts(
+  'longest_word("one") == "one": ' +
+  (longest_word('one') == 'one').to_s
+)
+puts(
+  'longest_word("abc def abcde") == "abcde": ' +
+  (longest_word('abc def abcde') == 'abcde').to_s
+)
