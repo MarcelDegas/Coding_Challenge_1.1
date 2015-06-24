@@ -1,0 +1,19 @@
+def reverse(string)
+    reverse_word = []
+    letters = string.split("")
+    
+    letters.each do |l|
+      reverse_word.unshift(l)
+    end 
+    reverse_word.join
+end
+
+puts(
+  'reverse("abc") == "cba": ' + (reverse("abc") == "cba").to_s
+)
+puts(
+  'reverse("a") == "a": ' + (reverse("a") == "a").to_s
+)
+puts(
+  'reverse("") == "": ' + (reverse("") == "").to_s
+)
